@@ -6,7 +6,6 @@ Bonus::Bonus(b2World& world, sf::Texture& texture, sf::Vector2f position, BonusT
     switch (mType) {
         case BonusType::PaddleResizeUp: mBaseTextureRect = sf::IntRect(0, 200, 40, 40); break;
         case BonusType::PaddleResizeDown: mBaseTextureRect = sf::IntRect(0, 240, 40, 40); break;
-        // ... другие бонусы
         default: mBaseTextureRect = sf::IntRect(0, 200, 40, 40); break;
     }
 

@@ -4,7 +4,8 @@
 Ball::Ball(b2World& world, sf::Texture& texture, sf::Vector2f position)
     : mWorld(world), mStickJoint(nullptr), mIsStuck(true) {
 
-    sf::IntRect textureRect(32, 150, 32, 32);
+    sf::IntRect textureRect{32, 150, 32, 32};
+
     mSprite.setTexture(texture);
     mSprite.setTextureRect(textureRect);
     mSprite.setOrigin(textureRect.width / 2.0f, textureRect.height / 2.0f);
