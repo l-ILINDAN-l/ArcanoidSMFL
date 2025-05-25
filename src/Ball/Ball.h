@@ -1,26 +1,23 @@
-//
-// Created by gellertilya on 25.05.25.
-//
-
 #ifndef BALL_H
 #define BALL_H
 
 #include <box2d/box2d.h>
 #include <SFML/Graphics.hpp>
 
-class Ball {
+#include "../GameObject/GameObject.h"
+
+class Ball : public GameObject {
 public:
-    Ball();
-    void launch();
-    void stickToPaddle();
-    void update(float dt);
-    void draw(sf::RenderWindow& target);
+    Ball(b2World& world, sf::Texture& texture, sf::Vector2f position);
+    void launch(const b2Vec2& velocity);
+    void increaseSpeed(float factor);
+    void stickToPaddle(b2Body* paddleBody);
+    bool isStuck() const;
+    void reset(sf::Vector2f position, b2Body* paddleBody);
 private:
-    sf::Sprite sprite;
-    sf::Texture texture;
-    b2Body* m_body;
-    bool m_isSticky;
-    bool m_isOnPaddle;
+    b2World& mWorld;
+    b2WeldJoint* mStickJoint;
+    bool mIsStuck;
 };
 
 
