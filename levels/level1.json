@@ -1,15 +1,30 @@
 {
-  "layout": [
-    [1, 1, 2, 1, 1, 0, 1, 1, 2, 1, 1],
-    [1, 3, 1, 1, 4, 1, 4, 1, 1, 3, 1],
-    [0, 1, 1, 5, 1, 1, 1, 5, 1, 1, 0]
-  ],
   "bricks": {
-    "0": { "type": "empty" },
-    "1": { "type": "normal", "health": 1, "texture_rect": [0, 0, 50, 20] },
-    "2": { "type": "indestructible", "texture_rect": [50, 0, 50, 20] },
-    "3": { "type": "bonus", "bonus_type": "resize_up", "texture_rect": [100, 0, 50, 20] },
-    "4": { "type": "speed_up", "texture_rect": [150, 0, 50, 20] },
-    "5": { "type": "health", "health": 3, "texture_rect": [200, 0, 50, 20] }
-  }
+    "1": {
+      "type": "normal",
+      "health": 1,
+      "texture_rect": [0, 0, 50, 20]
+    },
+    "2": {
+      "type": "health",
+      "health": 3,
+      "texture_rect": [50, 0, 50, 20]
+    },
+    "3": {
+      "type": "indestructible",
+      "texture_rect": [100, 0, 50, 20]
+    },
+    "4": {
+      "type": "bonus",
+      "bonus_type": "resize_up",
+      "health": 1,
+      "texture_rect": [150, 0, 50, 20]
+    }
+  },
+  "layout": [
+    [0, 3, 1, 2, 1, 1, 1, 2, 1, 3, 0],
+    [3, 1, 1, 1, 4, 4, 4, 1, 1, 1, 3],
+    [1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1],
+    [0, 1, 1, 4, 0, 0, 0, 4, 1, 1, 0]
+  ]
 }
